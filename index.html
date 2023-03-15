@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ketan Dasalaniya</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Sidebar Section -->
+    <section class="nav-section">
+        <div class="left-nav-style">
+            <div class="profile-image">
+                <img src="./profile.png" alt="profile-image">
+            </div>
+        </div>
+        <div class="menu-text">
+            <ul>
+                <li>
+                    <a href="#home">
+                        <i class="bi bi-house-door"></i>
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#features">
+                        <i class="bi bi-briefcase"></i>
+                        <span>FEATURES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio">
+                        <i class="bi bi-layers"></i>
+                        <span>PORTFOLIO</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#resume">
+                        <i class="bi bi-people"></i>
+                        <span>RESUME</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog">
+                        <i class="bi bi-image"></i>
+                        <span>BLOG</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="bi bi-chat"></i>
+                        <span>CONTACT</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://github.com/ketandasalaniya" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/ketandasalaniya/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:ketandasalaniya@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+        </div>
+        <div class="top-button">
+            <a href="#home">
+                <i class="bi bi-arrow-up-circle-fill"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="heading">
+            <h1>Ketan Dasalaniya</h1>
+            <div class="wrapper">
+                <span class="static-txt">I am a</span>
+                <span class="text dynamic-txt"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="feature-block">
+            <span>FEATURES</span>
+            <h2>What I Know</h2>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="feature-block">
+            <span>VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</span>
+            <h2>My Portfolio</h2>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="feature-block">
+            <span>TAKE A LOOK</span>
+            <h2>My Resume</h2>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="feature-block">
+            <span>VISIT MY BLOG AND KEEP YOUR FEEDBACK</span>
+            <h2>My Blog</h2>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="feature-block">
+            <span>CONTACT</span>
+            <h2>Contact With Me</h2>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="feature-block">
+            <span>END</span>
+            <h2>Footer</h2>
+        </div>
+    </section>
+</body>
+
+<script>
+    const text = document.querySelector(".dynamic-txt");
+
+    const textLoad = () => {
+        setTimeout(() => {
+            text.textContent = "Web Developer";
+        }, 0);
+        setTimeout(() => {
+            text.textContent = "Web Designer";
+        }, 4000);
+        setTimeout(() => {
+            text.textContent = "Frontend Developer";
+        }, 8000);
+    }
+    textLoad();
+    setInterval(textLoad, 12000);
+</script>
+
+</html>

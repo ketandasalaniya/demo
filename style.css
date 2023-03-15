@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Montserrat", sans-serif;
+    --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    --shadow-2: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    --shadow-3: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    --font-color-primary: #C4CFDE;
+    --font-color-secondary: #5e91ce;
+    --font-color-lighten: #c4cfde;
+    --body-bg: #212428;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+body {
+    background-color: var(--body-bg);
+}
+
+/* =============== NAVIGATION SIDEBAR =============== */
+
+/* ========== PROFILE IMAGE ==========  */
+.nav-section {
+    height: 100vh;
+    min-height: 100vh;
+    width: 17%;
+    background-color: #212428;
+    position: fixed;
+    box-shadow: var(--shadow-3);
+    display: block;
+    float: left;
+}
+
+.left-nav-style {
+    padding: 50px 40px 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    height: 191.99px;
+    width: 191.99px;
+    border-radius: 50%;
+    background-color: rgb(15, 36, 36);
+    box-shadow: var(--shadow-1);
+}
+
+.profile-image img {
+    height: 191.99px;
+    width: 191.99px;
+    border-radius: 50%;
+    border: 6px solid #32363b;
+    object-fit: cover;
+    position: inherit;
+}
+
+/* ========== SIDEBAR MENU ========== */
+
+.nav-section .menu-text ul {
+    margin: 8px 20px;
+}
+
+.nav-section .menu-text ul li {
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    margin: 25px 0px;
+}
+
+.nav-section .menu-text ul li:hover {
+    background: #181a1d;
+    border-radius: 5px;
+}
+
+.nav-section .menu-text ul li a {
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease;
+}
+
+.nav-section .menu-text ul li a span {
+    color: var(--font-color-primary);
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.nav-section .menu-text ul li i {
+    width: 100%;
+    height: auto;
+    color: var(--font-color-primary);
+    margin: 20px;
+    font-size: 24px;
+}
+
+
+/* ========== SOCIAL ICONS ========== */
+.nav-section .social {
+    min-width: 100%;
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 31px;
+    margin-top: 57px;
+}
+
+.nav-section .social a {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #181a1d;
+    color: var(--font-color);
+    box-shadow: var(--shadow-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-section .social a:hover {
+    background: #181a1d;
+    transform: translateY(-7px);
+    transition: all 0.3s ease;
+}
+
+.nav-section .top-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background: #181a1d;
+    color: var(--font-color);
+    box-shadow: var(--shadow-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto;
+}
+
+.nav-section .top-button a {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-section .top-button:hover {
+    background: #181a1d;
+    transform: translateY(-7px);
+    transition: all 0.3s ease;
+}
+
+/* =============== HOME PAGE =============== */
+
+#home {
+    width: 83%;
+    height: 100vh;
+    float: right;
+    letter-spacing: 9px;
+}
+
+#home .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#home .heading h1 {
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-size: 90px;
+    line-height: 1.29;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.wrapper {
+    display: inline-flex;
+    position: absolute;
+    top: 58%;
+    margin: 20px 0;
+}
+
+.wrapper .static-txt {
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.dynamic-txt {
+    content: "";
+    color: #5e91ce;
+    font-family: var(--font-primary);
+    font-size: 35px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 15px;
+}
+
+.text.dynamic-txt:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--body-bg);
+    border-left: 2px solid;
+    animation: animate 4s steps(15) infinite;
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: calc(100% + 10px);
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+/* =============== FEATURES SECTION =============== */
+
+
+
+#features {
+    width: 83%;
+    height: 100vh;
+    display: block;
+    float: right;
+    padding: 90px 0px 70px 0px;
+}
+
+#features .feature-block {
+    text-align: center;
+}
+
+#features .feature-block span {
+    color: var(--font-color-secondary);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    display: block;
+}
+
+#features .feature-block h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--font-color-lighten);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* =============== PORTFOLIO SECTION =============== */
+
+
+
+#portfolio {
+    width: 83%;
+    height: 100vh;
+    display: block;
+    float: right;
+    padding: 90px 0px 70px 0px;
+}
+
+#portfolio .feature-block {
+    text-align: center;
+}
+
+#portfolio .feature-block span {
+    color: var(--font-color-secondary);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    display: block;
+}
+
+#portfolio .feature-block h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--font-color-lighten);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* =============== RESUME SECTION =============== */
+
+
+
+#resume {
+    width: 83%;
+    height: 100vh;
+    display: block;
+    float: right;
+    padding: 90px 0px 70px 0px;
+}
+
+#resume .feature-block {
+    text-align: center;
+}
+
+#resume .feature-block span {
+    color: var(--font-color-secondary);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    display: block;
+}
+
+#resume .feature-block h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--font-color-lighten);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* =============== BLOG SECTION =============== */
+
+
+
+#blog {
+    width: 83%;
+    height: 100vh;
+    display: block;
+    float: right;
+    padding: 90px 0px 70px 0px;
+}
+
+#blog .feature-block {
+    text-align: center;
+}
+
+#blog .feature-block span {
+    color: var(--font-color-secondary);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    display: block;
+}
+
+#blog .feature-block h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--font-color-lighten);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* =============== CONTACT SECTION =============== */
+
+
+
+#contact {
+    width: 83%;
+    height: 100vh;
+    display: block;
+    float: right;
+    padding: 90px 0px 70px 0px;
+}
+
+#contact .feature-block {
+    text-align: center;
+}
+
+#contact .feature-block span {
+    color: var(--font-color-secondary);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    display: block;
+}
+
+#contact .feature-block h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--font-color-lighten);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* =============== FOOTER SECTION =============== */
+
+
+
+#footer {
+    width: 83%;
+    height: 100vh;
+    display: block;
+    float: right;
+    padding: 90px 0px 70px 0px;
+}
+
+#footer .feature-block {
+    text-align: center;
+}
+
+#footer .feature-block span {
+    color: var(--font-color-secondary);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    display: block;
+}
+
+#footer .feature-block h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--font-color-lighten);
+    margin-top: 15px;
+    margin-bottom: 0;
+}
